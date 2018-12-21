@@ -1,6 +1,5 @@
 package application;
 
-import java.awt.event.ActionListener;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -10,7 +9,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
@@ -61,8 +59,6 @@ public class LoginView {
 			 
 		    @Override
 		    public void handle(ActionEvent e) {
-		    	System.out.println("[DEBUG] Username = "+userTextField.getText());
-		        System.out.println("[DEBUG] Password = "+pwBox.getText());
 		        authentication = new LoginViewModel(userTextField.getText(),pwBox.getText());
 		        
 		        actiontarget.setFill(Color.FIREBRICK);
@@ -87,22 +83,4 @@ public class LoginView {
 	public Scene getScene(){
 		return this.scene;
 	}
-	/*
-	public String getUserInput() {
-	        return userTextField.getText();
-	    }
-	
-	public String getPWInput() {
-		return pwBox.getText();
-	}
-
-	
-	public void addBtnListener(ActionListener al){
-        signInBtn.setOnAction(al);
-
-	}*/
-
-	
-	
-
 }
